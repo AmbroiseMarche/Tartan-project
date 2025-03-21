@@ -1,4 +1,4 @@
-# Hexagonal Board Game
+# Tartan: La couronne des highlands 
 
 A strategic game played on a hexagonal grid.
 
@@ -50,16 +50,19 @@ python -m src.main
 
 The game consists of two phases:
 
-1. **Placement Phase**: Players take turns placing units on the board
+1. **Placement Phase**: Players take turns placing units on the board. Their units must be adjacent to no other unit, and can't be placed on lakes.
 2. **Movement Phase**: Players take turns moving pieces and performing actions
 
 ### Piece Types and Movement Rules
 
-- **Unit**: Moves to adjacent cells, can fuse with other units
-- **Double**: Moves up to 2 cells, can fuse with units
-- **Triple**: Moves up to 3 cells, can attack doubles
+- **Unit**: Moves to adjacent cells, can fuse with ally units, or doubles.
+- **Double**: Moves up to 2 cells, can fuse with units, can attack units
+- **Triple**: Moves up to 3 cells, can attack doubles, but not units
 - **Quadruple**: Cannot move (immobile)
 - **Hat**: Moves to adjacent cells, can move on top of other pieces
+
+### Winning condition
+You must be the first to put a hat on top of an allied quadruple.
 
 ## Development
 
@@ -72,4 +75,4 @@ The project structure is organized as follows:
 
 ## License
 
-[MIT License](LICENSE)
+[APACHE License 2.0](LICENSE)
